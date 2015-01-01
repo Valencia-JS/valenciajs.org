@@ -31,21 +31,6 @@ jQuery(document).ready(function($){
 		$('.cd-form').removeClass('is-submitted').find('.cd-loading').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
 	});
 
-	$('.cd-submit').on('click', function(event){
-		if($('.cd-form').hasClass('is-active')) {
-			event.preventDefault();
-			//show the loading bar and the corrisponding message
-			$('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				showMessage();
-			});
-
-			//if transitions are not supported - show messages
-			if($('html').hasClass('no-csstransitions')) {
-				showMessage();
-			}
-		}
-	});
-
 	//placeholder fallback (i.e. IE9)
 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
 	if(!Modernizr.input.placeholder){
