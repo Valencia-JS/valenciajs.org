@@ -24,13 +24,6 @@ jQuery(document).ready(function($){
 	    }
 	});
 
-	//backspace doesn't fire the keyup event in android mobile
-	//so we check if the email input is focused to hide messages and loading bar
-	$('.cd-form .cd-email').on('focus', function(){
-		messages.removeClass('slide-in is-visible');
-		$('.cd-form').removeClass('is-submitted').find('.cd-loading').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
-	});
-
 	//placeholder fallback (i.e. IE9)
 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
 	if(!Modernizr.input.placeholder){
