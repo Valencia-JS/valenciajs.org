@@ -127,10 +127,28 @@ body {
    border-width: 40px;
 }
 
+.cta-container .divider {
+   font-style: italic;
+}
+
+.title-link {
+   color: #303030;
+   text-decoration: none;
+}
+
+.title-link:hover {
+   color: rgba(0,0,0,.70);
+}
+
 .twitter-follow-button {
    display: block;
-   margin: 0 auto;
-   margin-top: 20px;
+   margin: 20px auto 0px;
+}
+
+.github-button {
+   display: block;
+   margin: 20px auto 0px;
+   width: 75px;
 }
 
 /* Divider */
